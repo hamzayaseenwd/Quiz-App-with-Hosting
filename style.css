@@ -12,7 +12,7 @@
 }
 .nav-bar>h1 {
     color: #ffff;
-    font-size: 6rem;
+    font-size: 4rem;
     padding-right: 1rem;
     background-color: #10266b;
     text-decoration: none;
@@ -25,43 +25,43 @@
     background-color: #10266b;
 }
 #head{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 #timer{
-    font-size: 5rem;
+    font-size: 3rem;
 }
 form>label{
-    font-size: 4rem;
+    font-size: 3rem;
 }
 input{
     width: 3rem;
     height: 3rem;
-    font-size: 4rem;
-    padding-left: 1rem;
-    margin: 1rem;
+    font-size: 3rem;
+    padding-left: 20px;
+    margin: 20px;
 }
 #ques{
     display: flex;
     justify-content:center ;
-    font-size: 4rem;
-    margin-top: 6%;
+    font-size: 3rem;
+    margin-top: 20px;
 }
 #opt1{
     text-align: center;
-    font-size: 4rem;
-    margin-top: 6%;
+    font-size: 3rem;
+    margin-top: 20px;
 
 
 }
 #opt2{
     text-align: center;
-    font-size: 4rem;
-    margin-top: 6%;
+    font-size: 3rem;
+    margin-top: 20px;
 }
 #opt3{
     text-align: center;
-    font-size: 4rem;
-    margin-top: 6%;
+    font-size: 3rem;
+    margin-top: 20px;
 }
 button{
     font-size: 3rem;

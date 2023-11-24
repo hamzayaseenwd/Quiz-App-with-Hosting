@@ -129,22 +129,19 @@ function nextQuestion(){
     }
 
     button.disabled = true
-
+    
     if(index >questions.length - 1){
-        
-        var percentage = ((score / questions.length)*100).toFixed(2)
-
-        if (percentage <= 70.00) {
-            Swal.fire(
-                'Good job!',
-                `Your percentage is ${percentage}`,
-                'success'
-                )
-                nextQuestion()
-            }
+        Swal.fire(
+            'Quiz Completed!',
+            `Your percentage is ${((score / questions.length)*100).toFixed(2)}
+            Try Again Later`,
+            'success'
+            )
+            index = 0;
+            score = 0;
+            
+                
     }else{
-
-        
         para.innerHTML = questions[index].question;
         opt1.innerText = questions[index].option1;
         opt2.innerText = questions[index].option2;
@@ -153,10 +150,11 @@ function nextQuestion(){
     }
 }
 
-// nextQuestion()
 
 
 function clicked()
 {
     button.disabled = false
 }
+
+// nextQuestion()
