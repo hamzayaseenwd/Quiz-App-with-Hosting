@@ -1,3 +1,18 @@
+var firebaseConfig = {
+    apiKey: "AIzaSyBk_xpR264gUH4COhQkcH8ujykrn2MmjTo",
+    authDomain: "quizapp-c73d7.firebaseapp.com",
+    databaseURL: "https://quizapp-c73d7-default-rtdb.firebaseio.com",
+    projectId: "quizapp-c73d7",
+    storageBucket: "quizapp-c73d7.appspot.com",
+    messagingSenderId: "121633434123",
+    appId: "1:121633434123:web:c012712e7b4530968b350e"
+};
+
+// Initialize Firebase
+var app = firebase.initializeApp(firebaseConfig);
+
+
+
 var questions = [
     {
         question: "What is the largest mammal on land?",
@@ -104,7 +119,7 @@ setInterval(function(){
         sec = 59;
         nextQuestion()
     }
-},1000)
+},10)
 
 
 function nextQuestion(){
