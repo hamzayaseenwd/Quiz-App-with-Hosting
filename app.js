@@ -1,18 +1,3 @@
-var firebaseConfig = {
-    apiKey: "AIzaSyBk_xpR264gUH4COhQkcH8ujykrn2MmjTo",
-    authDomain: "quizapp-c73d7.firebaseapp.com",
-    databaseURL: "https://quizapp-c73d7-default-rtdb.firebaseio.com",
-    projectId: "quizapp-c73d7",
-    storageBucket: "quizapp-c73d7.appspot.com",
-    messagingSenderId: "121633434123",
-    appId: "1:121633434123:web:c012712e7b4530968b350e"
-};
-
-// Initialize Firebase
-var app = firebase.initializeApp(firebaseConfig);
-
-
-
 var questions = [
     {
         question: "What is the largest mammal on land?",
@@ -119,7 +104,7 @@ setInterval(function(){
         sec = 59;
         nextQuestion()
     }
-},10)
+},1000)
 
 
 function nextQuestion(){
@@ -144,19 +129,22 @@ function nextQuestion(){
     }
 
     button.disabled = true
-    
+
     if(index >questions.length - 1){
-        Swal.fire(
-            'Quiz Completed!',
-            `Your percentage is ${((score / questions.length)*100).toFixed(2)}
-            Try Again Later`,
-            'success'
-            )
-            index = 0;
-            score = 0;
-            
-                
+        
+        var percentage = ((score / questions.length)*100).toFixed(2)
+
+        if (percentage <= 70.00) {
+            Swal.fire(
+                'Good job!',
+                `Your percentage is ${percentage}`,
+                'success'
+                )
+                nextQuestion()
+            }
     }else{
+
+        
         para.innerHTML = questions[index].question;
         opt1.innerText = questions[index].option1;
         opt2.innerText = questions[index].option2;
@@ -165,11 +153,10 @@ function nextQuestion(){
     }
 }
 
+// nextQuestion()
 
 
 function clicked()
 {
     button.disabled = false
 }
-
-// nextQuestion()
